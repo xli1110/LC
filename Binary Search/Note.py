@@ -18,6 +18,7 @@ Tips:
     low <= high
     Two pointers cross over after loop, like [x, x, x, x, high, low, x, x, x].
     Note that pointers may EXCEED after loop, like high -> -1 or low -> len(arr).
+    In conclusion, low in {0, 1, 2, ..., len(arr)}, high in {-1, 0, 1, ..., len(arr) - 1}.
 
     Iteration:
     temp = f[mid]
@@ -35,7 +36,8 @@ Tips:
     Can test some concrete cases.
 
     Problems:
-    69(sqrt) - find the FLOOR of sqrt(x), after loop, high designates the floor.
+    35(insert) - search the (floor + 1) of tar, after loop, low designates floor + 1
+    69(sqrt) - search the FLOOR of sqrt(x), after loop, high designates the floor.
 
 
 2 - Partially Binary Search
