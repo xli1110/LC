@@ -6,9 +6,10 @@ class Solution:
         high = len(nums) - 1
 
         while low < high:
-            # low and high meet at a peak
+            # low and high meet at the peak
             mid = (low + high) >> 1
-            if nums[mid] > nums[mid + 1]:  # (mid + 1) does not exceed
+            # while low < high, (mid + 1) never not exceeds
+            if nums[mid] > nums[mid + 1]:
                 # prune nums[mid + 1:]
                 high = mid
             else:
