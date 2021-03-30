@@ -1,38 +1,50 @@
 """
 1 - BFS on Trees
 
-from collections import deque
+    Problems:
+    101
+    102
+    103
+    107
+    111
 
-if root is None:
-    raise Exception("xxx")
+    Model:
+    from collections import deque
 
-# initialization
-res = []
-q = deque()
-q.append(root)
+    if root is None:
+        raise Exception("xxx")
 
-# BFS
-while q:
+    # initialization
+    res = []
+    q = deque()
+    q.append(root)
 
-    # level loop
-    level = []
-    for _ in range(len(q)):
+    # BFS
+    while q:
 
-        # dequeue
-        node = q.popleft()
-        level.append(node.val)
+        # level loop
+        level = []
+        for _ in range(len(q)):
 
-        # add new nodes - note the condition may vary
-        if node.left is not None:
-            q.append(node.left)
-        if node.right is not None:
-            q.append(node.right)
+            # dequeue the current node
+            node = q.popleft()
+            level.append(node.val)
 
-    res.append(level)
+            # loop children
+            # add new nodes - note the condition may vary
+            if node.left is not None:
+                q.append(node.left)
+            if node.right is not None:
+                q.append(node.right)
 
-return res
+        res.append(level)
+
+    return res
 
 2 - BFS on Graphs or Matrices - the shortest path
-Need a matrix to store searched elements. Otherwise, BFS may stuck in infinite loops.
+
+Need a matrix to store searched elements.
+Otherwise, BFS may stuck in infinite loops.
+
 searched = [[False] * N for _ in range(M)]
 """
