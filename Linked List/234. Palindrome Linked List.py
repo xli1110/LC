@@ -11,16 +11,13 @@ class Solution:
             return True
 
         """
-        Auxiliary Array - Trash
+        Auxiliary Array
         O(N) - loop twice (slice)
         O(N)
         """
-        # arr = []
-        # p = head
-        # while p is not None:
-        #     arr.append(p.val)
-        #     p = p.next
-        # return arr == arr[::-1]
-
-        """
-        """
+        arr = []
+        p = head
+        while p is not None:
+            arr.append(p.val)
+            p = p.next
+        return arr == arr[::-1]  # can be optimized with two pointers
