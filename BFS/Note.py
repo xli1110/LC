@@ -41,10 +41,10 @@
 
     return res
 
-2 - BFS on Graphs or Matrices - the shortest path
+2 - BFS on Graphs or Matrices
+    Can search the shortest path.
+    Need a matrix to store searched elements.
+    Otherwise, BFS may stuck in infinite loops.
 
-Need a matrix to store searched elements.
-Otherwise, BFS may stuck in infinite loops.
-
-searched = [[False] * N for _ in range(M)]
+    searched = [[False] * N for _ in range(M)]
 """

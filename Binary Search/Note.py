@@ -1,8 +1,8 @@
 """
 Tips:
-- tar > arr[mid], put tar before arr[mid] for clearer understanding
-- mid = (low + high) >> 1
-- high - low == 1 <==> mid == low
+    - tar > arr[mid], put tar before arr[mid] for clearer understanding
+    - mid = (low + high) >> 1
+    - high - low == 1 <==> mid == low
 
 
 1 - Basic Binary Search
