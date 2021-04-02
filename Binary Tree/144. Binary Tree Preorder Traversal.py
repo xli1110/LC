@@ -18,19 +18,15 @@ class Solution:
         self.rec(node.right)
 
     def ite(self, root):
-        if root is None:
-            return []
-
         res = []
-        stack = [root]
-
-        while stack:
-            node = stack.pop()
-            res.append(node.val)
-            if node.right is not None:
+        stack = []
+        node = root
+        while node is not None or stack:
+            while node is not None:
+                res.append(node.val)
                 stack.append(node.right)
-            if node.left is not None:
-                stack.append(node.left)
+                node = node.left
+            node = stack.pop()
         return res
 
     def preorderTraversal(self, root: TreeNode) -> List[int]:

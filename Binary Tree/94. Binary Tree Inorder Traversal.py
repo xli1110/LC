@@ -17,6 +17,19 @@ class Solution:
         self.res.append(node.val)
         self.rec(node.right)
 
+    def ite(self, root):
+        res = []
+        stack = []
+        node = root
+        while node is not None or stack:
+            while node is not None:
+                stack.append(node)
+                node = node.left
+            node = stack.pop()
+            res.append(node.val)
+            node = node.right
+        return res
+
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         """
         Recursion / Iteration
@@ -27,10 +40,10 @@ class Solution:
         """
         Recursion
         """
-        self.rec(root)
-        return self.res
+        # self.rec(root)
+        # return self.res
 
         """
         Iteration
         """
-        # TBH IDK
+        return self.ite(root)

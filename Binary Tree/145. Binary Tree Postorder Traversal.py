@@ -17,6 +17,19 @@ class Solution:
         self.rec(node.right)
         self.res.append(node.val)
 
+    def ite(self, root):
+        res = []
+        stack = []
+        node = root
+
+        while node is not None or stack:
+            while node is not None:
+                res.append(node.val)
+                stack.append(node.left)
+                node = node.right
+            node = stack.pop()
+        return res[::-1]
+
     def postorderTraversal(self, root: TreeNode) -> List[int]:
         """
         Recursion / Iteration
@@ -27,10 +40,10 @@ class Solution:
         """
         Recursion
         """
-        self.rec(root)
-        return self.res
+        # self.rec(root)
+        # return self.res
 
         """
         Iteration
         """
-        # TBH IDK
+        return self.ite(root)
