@@ -2,11 +2,9 @@
 1 - BFS on Trees
 
     Problems:
-    101
-    102
-    103
-    107
-    111
+    101(symmetric) - see Binary Tree
+    102, 103, 107(level)
+    104, 111(depth) - see Binary Tree
 
     Model:
     from collections import deque

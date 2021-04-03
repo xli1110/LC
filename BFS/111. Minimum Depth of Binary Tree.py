@@ -10,10 +10,7 @@ class TreeNode:
 
 
 class Solution:
-    def minDepth(self, root: TreeNode) -> int:
-        if root is None:
-            return 0
-
+    def BFS(self, root):
         q = deque()
         q.append(root)
         depth = 1
@@ -31,3 +28,9 @@ class Solution:
             depth += 1
 
         raise Exception("Wrong")
+
+    def minDepth(self, root: TreeNode) -> int:
+        if root is None:
+            return 0
+
+        return self.BFS(root)

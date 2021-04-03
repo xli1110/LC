@@ -9,10 +9,17 @@ class TreeNode:
 class Solution:
     def DFS(self, inorder, postorder, in_low, in_high, post_low, post_high):
         """
+        Key Point:
         inorder = [L, node(index = i), R]
         postorder = [L, R, node]
 
-        i = inorder.index(postorder[post_high])
+        1 - Find Index i
+        Get the value from postorder.
+        val = postorder[post_high]
+        Find the index from inorder.
+        i = inorder.index(val)
+
+        2 - Divide Inorder by Index
         Let x denotes the pointer passed by DFS, and x' denotes the updated pointers we feed to recursive function.
 
         We can simply divide inorder into L and R as below.
@@ -24,13 +31,12 @@ class Solution:
         in_low' = i + 1
         in_high' = in_high
 
-
-        Then, we divide postorder based on the LENGTH of L and R.
-        L(postorder): low is fixed, calculate high based on the LENGTH
+        3 - Divide Postorder by the LENGTH of L and R
+        L(postorder): low is FIXED, calculate high based on the LENGTH
         post_low' = post_low
         post_high' - post_low' = in_high' - in_low'    =>    post_high' = post_low + ((i - 1) - in_low)
 
-        R(postorder): high is fixed, calculate low based on the LENGTH
+        R(postorder): high is FIXED, calculate low based on the LENGTH
         post_high' - post_low' = in_high' - in_low'    =>    post_low' = (post_high - 1) - (in_high - (i + 1))
         post_high' = post_high - 1
         """
@@ -52,7 +58,7 @@ class Solution:
             in_low,
             i - 1,
             post_low,
-            post_low + (i - 1 - in_low)
+            post_low + ((i - 1) - in_low)
         )  # left
         node.right = self.DFS(
             inorder, postorder,

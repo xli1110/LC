@@ -46,10 +46,10 @@
 
     Problems:
     101(symmetric) - DFS(root, root), note if conditions; BFS, note the None node processing
-    104(depth)
+    104, 111(depth)
     105/106(construct) - Locate i and calculate length from INORDER. See 106 annotation for details.
     112(path seeking) - self.res.append(self.path[:]) when tar found; self.path.pop() when going up
-
+    116, 117(link next right node)
 
 
 
