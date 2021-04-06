@@ -6,7 +6,7 @@
     102, 103, 107(level)
     104, 111(depth) - see Binary Tree
 
-    Model:
+    BFS Code:
     from collections import deque
 
     if root is None:

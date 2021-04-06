@@ -33,7 +33,7 @@ class Solution:
 
         if node.left is not None:  # node has two children
             node.left.next = node.right  # link left child
-            node.right.next = node.next.left if node.next is not None else None  # lnk right child
+            node.right.next = node.next.left if node.next is not None else None  # link right child
 
         self.DFS(node.left)
         self.DFS(node.right)

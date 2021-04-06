@@ -1,4 +1,5 @@
 """
+114,430 TBD
 1 - Traversal
     Preorder, Inorder, Postorder, Levelorder
 
@@ -8,7 +9,7 @@
     145(post)
     102, 103, 107(level) - see BFS
 
-    Iterative Traversal:
+    Iterative Traversal Code:
     # init
     res = []
     stack = []
@@ -43,19 +44,16 @@
     Pre/In return res; Post return res[::-1]
 
 2 - Recursion
+    From top to bottom - Preorder: use variable like self.path, self.res
+    From bottom to top - Postorder: l = DFS(node.left), r = DFS(node.right); process l and r
 
     Problems:
     101(symmetric) - DFS(root, root), note if conditions; BFS, note the None node processing
-    104, 111(depth)
+    110(balance) - postorder
+    104(depth) - postorder
     105/106(construct) - Locate i and calculate length from INORDER. See 106 annotation for details.
     112(path seeking) - self.res.append(self.path[:]) when tar found; self.path.pop() when going up
-    116, 117(link next right node)
-
-
-
-
-
-
-DFS
-114,430 TBD
+    116, 117(link next right node) - DFS(right) BEFORE DFS(left)
+    236(lowest common parent) - postorder
+    297(serialization) - arr.pop(0)
 """
