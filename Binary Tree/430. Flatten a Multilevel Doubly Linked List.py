@@ -16,6 +16,5 @@ class Solution:
                 p = p.next
             else:
                 t = p
-                
 
         return head

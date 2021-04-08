@@ -17,7 +17,7 @@ Tips:
     136, 217, 219(single number / duplicates) - hash/xor
     202(happy number) - store the cycle in a set
     242(anagram) - two dictionaries storing frequencies
-    349, 350(intersection of arrays) - loop arr1 to construct the dic; loop arr2 for the res and modifying dic meanwhile
+    349, 350(intersection of arrays) - loop arr1: d[x] += 1; loop arr2: res.append(x), d[x] -= 1
 
     Model:
     dic = {}

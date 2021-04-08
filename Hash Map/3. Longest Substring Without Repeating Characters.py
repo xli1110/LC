@@ -3,7 +3,7 @@ class Solution:
         """
         loop:
             if dic consists of char:
-                # use the smaller to iterate
+                # use the SMALLER to iterate
                 if i - dic[char] <= dp[i - 1]:
                     dp[i] = i - dic[char]
                 else:
@@ -32,5 +32,5 @@ class Solution:
             else:
                 # XXXXXBA, dp[j - 1] = 6, dp[j] = 7 (XXXXXBA)
                 dp[i] = dp[i - 1] + 1
-            dic[char] = i
+            dic[char] = i  # do not forget this
         return max(dp)
