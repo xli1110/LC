@@ -33,7 +33,6 @@ Tips:
 2 - Hash Table for Strings
 
     Problems:
-    2(longest sub-string) - dp[i] denotes the maximum sub-string length ending at s[i]
     205(isomorphic strings)
 
 3 - Others

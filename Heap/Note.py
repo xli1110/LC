@@ -15,9 +15,6 @@ Tips:
 
     Problems:
     703(kth largest in a stream)
-    41Offer(median in stream) - two heaps
-
-2 - Others
-    215(kth largest in an array, comprehensive methods) - quick sort; heap; QUICK SELECT
     1046
+    Offer - 41(median in stream) - two heaps
 """
