@@ -13,7 +13,7 @@ Tips:
 2 - Classic Linked List Problems
 
     Problems:
-    2(add) - while l1 or l2; node = ListNode((v1 + v2 + carry) % 10, None); carry = (v1 + v2 + carry) // 10
+    2(add linked lists) - while l1 or l2; node = ListNode((v1 + v2 + carry) % 10, None); carry = (v1 + v2 + carry) // 10
     21(merge) - dummy, p = dummy, traverse lists, p = l1 if l2 is None else l2
     61(rotate) - calculate k % length; find new head/tail; link tail to head, link new tail to None
     203(remove val) - p1 = dummy, p2 = head; loop: p1.next = p2.next, p2 = p2.next or p1 = p1.next, p2 = p2.next

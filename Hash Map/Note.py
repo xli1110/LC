@@ -15,9 +15,11 @@ Tips:
     1(two sum)
     36(valid sudoku)
     136, 217, 219(single number / duplicates) - hash/xor
+    169(majority)
     202(happy number) - store the cycle in a set
     242(anagram) - two dictionaries storing frequencies
     349, 350(intersection of arrays) - loop arr1: d[x] += 1; loop arr2: res.append(x), d[x] -= 1
+    448(disappeared numbers) - loop one: hash construction; loop two: check disappearance
 
     Model:
     dic = {}

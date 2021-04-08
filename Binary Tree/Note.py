@@ -1,5 +1,6 @@
 """
 114,430 TBD
+
 1 - Traversal
     Preorder, Inorder, Postorder, Levelorder
 
@@ -54,6 +55,9 @@
     105/106(construct) - Locate i and calculate length from INORDER. See 106 annotation for details.
     112(path seeking) - self.res.append(self.path[:]) when tar found; self.path.pop() when going up
     116, 117(link next right node) - DFS(right) BEFORE DFS(left)
+    226(invert)
     236(lowest common parent) - postorder
     297(serialization) - arr.pop(0)
+    543(diameter) - postorder
+    617(merge) - recall 2(add linked lists) and 106(tree construction)
 """
