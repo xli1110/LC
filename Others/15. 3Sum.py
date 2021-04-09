@@ -7,10 +7,10 @@ class Solution:
         0.1 - For low and high, loop as below.
               There is no need to search in [i, len(nums) - 1], instead search from high or low.
 
-            j = low + 1
-            while j < high and nums[j] == nums[low]:  # note that J < HIGH
-                j += 1
-            low = j
+               j = low + 1
+               while j < high and nums[j] == nums[low]:  # note that J < HIGH
+                   j += 1
+               low = j
 
         1 - Sort.
         2 - Fix i, and let two pointers low and high search the target.

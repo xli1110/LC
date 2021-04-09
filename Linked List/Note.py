@@ -24,12 +24,11 @@ Tips:
 3 - Two Pointers (Fast and Slow)
 
     Problems:
-    19(remove nth) - p1 moves n steps from dummy; p1 and p2 move to the end until p1 is None
+    19(remove nth from end) - p1 moves n steps from dummy; p1 and p2 move to the end until p1 is None
     141(cycle) - p1 = head, p2 = head.next; while p2 is not None and p2.next is not None
     142(cycle start) - 141 + cycle length + 19
     160(intersection) - p1 moves L1 + C + L2 + C steps and p2 moves L2 + C + L1 steps
 
 4 - Others
     138(copy with random pointer) - loop twice as storing nodes and linking them; note d.get(key, None)
-
 """

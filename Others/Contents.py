@@ -13,14 +13,40 @@
 ----Medium----
 
 5. Longest Palindromic Substring - <Two Pointers, Central Expansion>
-    Notes:
-    1 - The center has (N + N - 1) potential positions, not N.
-    2 - return s[low + 1:high].
-    3 - No need to distinguish index exceeding or digit difference.
+   Notes:
+   1 - The center has (N + N - 1) potential positions, not N.
+   2 - return s[low + 1:high].
+   3 - No need to distinguish index exceeding or digit difference.
 
-11. Container With Most Water - <Two Pointers, Boundary Centralization>
+11. Container With Most Water - <Two Pointers>
 
 15. 3Sum - <Sort, Two Pointers, Duplicates>
+
+17. Letter Combinations of a Phone Number - <DFS, Backtracking>
+    Similar Problems:
+    112. Path Sum
+    Notes:
+    1 - Base Case
+        Have visited all digits.
+        Store the path.
+        self.res.append("".join(self.path))
+
+    2 - Search the letters associated with the current digit.
+        digit = digits[low]
+        arr = dic[digit]
+
+    3 - Loop its children.
+        for char in arr:
+            self.path.append(char)
+            self.DFS(digits, low + 1)
+            self.path.pop()
+
+22. Generate Parentheses - <DFS, Backtracking>
+    Similar Problems:
+    112. Path Sum
+
+31. Next Permutation
+
 
 215. Kth Largest Element in an Array - <Quick Sort, Heap, Quick Select>
 """
