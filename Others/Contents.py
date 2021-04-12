@@ -47,7 +47,7 @@
     Notes:
     1 - Apply brute-force method to find all permutations and the next one, but the executing time exceeds.
 
-39. Combination Sum - <DFS, Backtracking, Combination>
+39. Combination Sum - <DFS, Backtracking, Combination / Permutation + Distinct>
     Notes:
     1 - Try to understand the DFS.
 

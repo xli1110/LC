@@ -1,17 +1,26 @@
 class Solution:
     def __init__(self):
+        self.com_set = set()
         self.res = []
         self.path = []
 
     def DFS(self, arr, tar):
         """
-        This is actually the PERMUTATION of the target.
-        Can not remove duplicate combinations.
-        arr = [2, 3], tar = 7
-        res = [[2,2,3], [2,3,2], [3,2,2]]
+        Brute Force
+        Permutation + Distinct
         """
         if tar == 0:
-            self.res.append(self.path[:])
+            # Distinct
+            # 1 - slice
+            # 2 - sort
+            # 3 - tuple, list is not hashable
+            # 4 - check distinction
+            temp = self.path[:]
+            temp.sort()
+            tu = tuple(temp)
+            if tu not in self.com_set:
+                self.com_set.add(tu)
+                self.res.append(temp)
             return
         if tar < 0:
             return
@@ -42,5 +51,6 @@ class Solution:
         if not candidates:
             raise Exception("Empty Candidate List")
 
-        self.DFS2(candidates, 0, target)
+        self.DFS(candidates, target)
+        # self.DFS2(candidates, 0, target)
         return self.res
