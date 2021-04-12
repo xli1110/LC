@@ -46,5 +46,5 @@ class Solution:
             return self.bs(nums, 0, low, target)
         elif target <= nums[-1]:
             return self.bs(nums, high, len(nums) - 1, target)
-        else:
-            return -1  # nums[-1] < target < nums[0]
+
+        return -1  # nums[-1] < target < nums[0], nothing found

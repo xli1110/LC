@@ -42,10 +42,18 @@
             self.path.pop()
 
 22. Generate Parentheses - <DFS, Backtracking>
-    Similar Problems:
-    112. Path Sum
 
-31. Next Permutation
+31. Next Permutation - <DFS, Backtracking, Permutation>
+    Notes:
+    1 - Apply brute-force method to find all permutations and the next one, but the executing time exceeds.
+
+39. Combination Sum - <DFS, Backtracking, Combination>
+    Notes:
+    1 - Try to understand the DFS.
+
+46. Permutations - <DFS, Backtracking>
+
+48. Rotate Image - <2D-Array>
 
 
 215. Kth Largest Element in an Array - <Quick Sort, Heap, Quick Select>

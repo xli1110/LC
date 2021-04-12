@@ -45,7 +45,7 @@ class Solution:
             return [-1, -1]
 
         # search end
-        end = self.search_end(nums,target)
+        end = self.search_end(nums, target)
         res.append(end)
 
         return res
