@@ -5,7 +5,7 @@ class Solution:
         0 - Avoid searching duplicates for ALL THREE pointers i, low, and high.
         0.0 - For i, use continue.
         0.1 - For low and high, loop as below.
-              There is no need to search in [i, len(nums) - 1], instead search from high or low.
+              There is no need to search in [i, len(nums) - 1], instead searching from high or low.
 
                j = low + 1
                while j < high and nums[j] == nums[low]:  # note that J < HIGH

@@ -21,4 +21,4 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] != 0:
                 nums[i_non], nums[i] = nums[i], nums[i_non]
-                i_non += 1
+                i_non += 1  # i_non designates the first zero

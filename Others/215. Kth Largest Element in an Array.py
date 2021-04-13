@@ -70,7 +70,7 @@ class Solution:
         O(NlogK)
         O(logN) - recursion call stack
         """
-        return self.heap_select(nums, k)
+        # return self.heap_select(nums, k)
 
         """
         Quick Selection

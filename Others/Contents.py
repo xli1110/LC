@@ -1,7 +1,7 @@
 """
 ----Easy----
 
-283. Move Zeroes - <Array, Partition>
+283. Move Zeroes - <Counting Sort, Two Pointers Partition>
 
 461. Hamming Distance - <Bitwise Operation>
      Similar Problems:
@@ -55,6 +55,9 @@
 
 48. Rotate Image - <2D-Array>
 
+56. Merge Intervals - <Sort with lambda, Two Pointers>
 
-215. Kth Largest Element in an Array - <Quick Sort, Heap, Quick Select>
+75. Sort Colors - <Counting Sort, Two Pointers Partition>
+
+215. Kth Largest Element in an Array - <Quick Sort, K-sized Heap, Quick Select>
 """

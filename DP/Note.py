@@ -16,7 +16,7 @@
 
         dic[s[i]] = i
 
-53. Maximum Subarray - <DP>
+53. Maximum Subarray
     # init
     dp = [arr[0]]
 
@@ -42,10 +42,16 @@
             return True
     return False
 
-70. Climbing Stairs - <Recursion, DP>
+62. Unique Paths
+    dp[i][j] = dp[i - 1] + dp[j - 1] if exist
+
+64. Minimum Path Sum
+    dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j] if exist
+
+70. Climbing Stairs
     dp[i] = dp[i - 1] + dp[i - 2]
 
-121. Best Time to Buy and Sell Stock - <DP>
+121. Best Time to Buy and Sell Stock
     # init
     low = arr[0]
     profit = 0

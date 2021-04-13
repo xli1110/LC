@@ -14,7 +14,7 @@ Tips:
     Problems:
     1(two sum)
     36(valid sudoku)
-    49(anagrams) - ord()/chr(); calculate the freq arr; hash the tuple(arr) as dic[tu] = [s1, s2, ...]
+    49(anagrams) - ord()/chr(); calculate the freq arr; hash the TUPLE(arr) as dic[tu] = [s1, s2, ...]
     136, 217, 219(single number / duplicates) - hash/xor
     169(majority)
     202(happy number) - store the cycle in a set
@@ -34,4 +34,5 @@ Tips:
 
 2 - Others
     138(copy with random pointer) - see linked list
+    560(sub-array sum) - pre_sum[i] = sum(arr[:i+1]), sum(arr[i + 1:j + 1]) = pre_sum[j] - pre_sum[i]
 """
