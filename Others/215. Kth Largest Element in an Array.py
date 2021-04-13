@@ -1,4 +1,4 @@
-# import heapq
+import heapq
 
 
 class Solution:
@@ -37,6 +37,19 @@ class Solution:
         else:
             self.q_select(arr, i_pivot + 1, high, k)
 
+    def heap_select(self, arr, k):
+        """
+        Maintain a heap with length == k.
+        """
+        h = []
+        for i in range(len(arr)):
+            if i < k:
+                heapq.heappush(h, arr[i])
+            else:
+                heapq.heappush(h, arr[i])
+                heapq.heappop(h)
+        return h[0]
+
     def findKthLargest(self, nums: [int], k: int) -> int:
         if not nums:
             raise Exception("Empty Array")
@@ -54,13 +67,10 @@ class Solution:
 
         """
         Heap
-        O(NlogN)
+        O(NlogK)
         O(logN) - recursion call stack
         """
-        # heapq.heapify(nums)
-        # while len(nums) > k:
-        #     heapq.heappop(nums)
-        # return nums[0]
+        return self.heap_select(nums, k)
 
         """
         Quick Selection

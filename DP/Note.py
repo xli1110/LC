@@ -27,6 +27,21 @@
         else:
             dp.append(dp[i - 1] + arr[i])
 
+55. Jump Game
+    # init
+    i = 0
+    right_most = 0
+
+    # loop
+    while i <= len(arr) - 1:
+        if i > right_most:
+            return False
+        if i + arr[i] > right_most:
+            right_most = i + arr[i]
+        if right_most >= len(arr) - 1:
+            return True
+    return False
+
 70. Climbing Stairs - <Recursion, DP>
     dp[i] = dp[i - 1] + dp[i - 2]
 
