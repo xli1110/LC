@@ -1,6 +1,4 @@
 """
-114,430 TBD
-
 1 - Traversal
     Preorder, Inorder, Postorder, Levelorder
 
@@ -48,16 +46,19 @@
 
 2 - Recursion
     From top to bottom - Preorder: use variable like self.path, self.res
-    From bottom to top - Postorder: l = DFS(node.left), r = DFS(node.right); process l and r
+    From bottom to top - Postorder: L = DFS(node.left), R = DFS(node.right); process l and r
+    BST - Inorder: L = DFS(left); process node, use self.pre; R = DFS(right)
 
     Problems:
+    98(valid BST) - inorder with self.pre
     101(symmetric) - DFS(root, root), note if conditions; BFS, note the None node processing
     110(balance) - postorder
     104(depth) - postorder
     105/106(construct) - Locate i and calculate length from INORDER. See 106 annotation for details.
     112(path seeking) - self.res.append(self.path[:]) when tar found; self.path.pop() when going up
+    114(flatten tree) - auxiliary arr solves the traversal result
     116, 117(link next right node) - DFS(right) BEFORE DFS(left)
-    226(invert)
+    226(invert) - use self.pre
     236(lowest common parent) - postorder
     297(serialization) - arr.pop(0)
     543(diameter) - postorder

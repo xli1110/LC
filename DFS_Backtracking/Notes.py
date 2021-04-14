@@ -12,5 +12,5 @@ Tips:
     39(combination + target) - DFS(arr[i:], tar - x)
     46(permutation) - DFS(arr[:i] + arr[i + 1:])
     78(sub-set) - DFS(arr[i + 1:])
-    79(2D array path search)
+    79(2D array path search) - t = mat[i][j], mat[i][j] = None; DFS; mat[i][j] = t
 """

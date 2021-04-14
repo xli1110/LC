@@ -20,7 +20,7 @@ class Solution:
         i = inorder.index(val)
 
         2 - Divide Inorder by Index
-        Let x denotes the pointer passed by DFS, and x' denotes the updated pointers we feed to recursive function.
+        Let x denotes the index passed by current DFS, and x' denotes the updated indices we pass to recursive function.
 
         We can simply divide inorder into L and R as below.
         L(inorder):

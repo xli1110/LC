@@ -51,6 +51,9 @@
 70. Climbing Stairs
     dp[i] = dp[i - 1] + dp[i - 2]
 
+96. Unique Binary Search Trees
+    Suck
+    
 121. Best Time to Buy and Sell Stock
     # init
     low = arr[0]
