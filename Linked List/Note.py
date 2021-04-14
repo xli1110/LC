@@ -1,14 +1,17 @@
 """
 Tips:
-    - dummy = Node(None)
-      dummy.next = head  # do not forget this
-    - always check whether the node is None before visiting its attributes
+    1 - dummy = Node(None)
+        dummy.next = head  # do not forget this
+    2 - always check whether the node is None before visiting its attributes
+
 
 
 1 - Linked List Design
 
     Problems:
     707(ADT)
+
+
 
 2 - Classic Linked List Problems
 
@@ -21,6 +24,8 @@ Tips:
     234(palindrome)
     328(odd/even) - dummy_odd, p1; dummy_even p2; p1.next = dummy_even.next, p2.next = None
 
+
+
 3 - Two Pointers (Fast and Slow)
 
     Problems:
@@ -28,6 +33,8 @@ Tips:
     141(cycle) - p1 = head, p2 = head.next; while p2 is not None and p2.next is not None
     142(cycle start) - 141 + cycle length + 19
     160(intersection) - p1 moves L1 + C + L2 + C steps and p2 moves L2 + C + L1 steps
+
+
 
 4 - Others
     138(copy with random pointer) - loop twice as storing nodes and linking them; note d.get(key, None)

@@ -44,6 +44,8 @@
     # return
     Pre/In return res; Post return res[::-1]
 
+
+
 2 - Recursion
     From top to bottom - Preorder: use variable like self.path, self.res
     From bottom to top - Postorder: l = DFS(node.left), r = DFS(node.right); process l and r

@@ -5,6 +5,7 @@ Tips:
     - high - low == 1 <==> mid == low
 
 
+
 1 - Basic Binary Search
     Search the index of a target in a given sorted array.
 
@@ -40,6 +41,7 @@ Tips:
     69(sqrt) - search the FLOOR of sqrt(x), after loop, high designates the floor.
 
 
+
 2 - Partially Binary Search
     Search the start of the second sub-array and the end of the first sub-array.
     high -> start, low -> end
@@ -59,6 +61,8 @@ Tips:
 
     Return after Loop:
     return low/high
+
+
 
 3 - Others
     34(repeated elements) - search start/end RESPECTIVELY

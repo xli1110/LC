@@ -24,11 +24,14 @@ class Solution:
         temp_sum = 0
         for i, x in enumerate(nums):
             temp_sum += x
+
+            # search target
             if temp_sum == k:
                 res += 1
             if temp_sum - k in dic:
                 res += len(dic[temp_sum - k])
 
+            # upgrade the dic
             if temp_sum not in dic:
                 dic[temp_sum] = [i]
             else:

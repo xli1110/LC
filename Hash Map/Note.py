@@ -1,13 +1,16 @@
 """
 Tips:
-    - dictionary
-      d = {}
-      d[key] = value
-      dic.get(key, default)
-      list(dic.keys())
-    - set
-      s = set()
-      s.add(x)
+    1 - dictionary
+        d = {}
+        d[key] = value
+        dic.get(key, default)
+        list(dic.keys())
+        list(dic.values())
+    2 - set
+        s = set()
+        s.add(x)
+
+
 
 1 - Hash Table for Checking Existence/Frequency
 
@@ -31,6 +34,8 @@ Tips:
         else:
             xxx
         dic[x] = i
+
+
 
 2 - Others
     138(copy with random pointer) - see linked list

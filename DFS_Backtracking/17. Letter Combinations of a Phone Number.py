@@ -13,7 +13,7 @@ class Solution:
         self.path = []
         self.res = []
 
-    def DFS(self, digits, low):
+    def DFS(self, digits, path_len):
         """
         1 - Base Case
             Have visited all digits.
@@ -21,27 +21,27 @@ class Solution:
             self.res.append("".join(self.path))
 
         2 - Search the letters associated with the current digit.
-            digit = digits[low]
+            digit = digits[path_len]
             arr = dic[digit]
 
         3 - Loop its children.
             for char in arr:
                 self.path.append(char)
-                self.DFS(digits, low + 1)
+                self.DFS(digits, path_len + 1)
                 self.path.pop()
         """
-        if low >= len(digits):  # search completed
+        if path_len >= len(digits):  # search completed
             self.res.append("".join(self.path))  # arr to str - s = "".join(arr)
             return
 
-        digit = digits[low]
+        digit = digits[path_len]
 
         if digit not in self.dic:  # invalid input protection
             raise Exception("Invalid Input {0}".format(digit))
 
         for char in self.dic[digit]:  # traverse children
             self.path.append(char)
-            self.DFS(digits, low + 1)
+            self.DFS(digits, path_len + 1)
             self.path.pop()
 
     def letterCombinations(self, digits: str) -> List[str]:

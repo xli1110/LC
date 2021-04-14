@@ -7,6 +7,7 @@ class Solution:
         if not arr:  # base case, all elements permuted
             self.res.append(self.path[:])
             return
+
         for i in range(len(arr)):
             self.path.append(arr[i])
             self.DFS(arr[:i] + arr[i + 1:])

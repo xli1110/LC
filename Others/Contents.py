@@ -47,9 +47,11 @@
     Notes:
     1 - Apply brute-force method to find all permutations and the next one, but the executing time exceeds.
 
-39. Combination Sum - <DFS, Backtracking, Combination / Permutation + Distinct>
-    Notes:
-    1 - Try to understand the DFS.
+39. Combination Sum - <DFS, Backtracking, Combination, Permutation + Distinct>
+    Similar Problems and DFS:
+    39. Combination Sum: self.DFS(arr[i:], tar - x)
+    46. Permutations: self.DFS(arr[:i] + arr[i + 1:])
+    78. Subsets: self.DFS(arr[i + 1:])
 
 46. Permutations - <DFS, Backtracking>
 
@@ -58,6 +60,10 @@
 56. Merge Intervals - <Sort with lambda, Two Pointers>
 
 75. Sort Colors - <Counting Sort, Two Pointers Partition>
+
+78. Subsets - <DFS, Backtracking>
+
+79. Word Search - <DFS, Backtracking>
 
 215. Kth Largest Element in an Array - <Quick Sort, K-sized Heap, Quick Select>
 """

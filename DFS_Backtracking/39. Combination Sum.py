@@ -30,11 +30,18 @@ class Solution:
             self.DFS(arr, tar - x)
             self.path.pop()
 
-    def DFS2(self, arr, low, tar):
+    def DFS2(self, arr, tar):
         """
         Combination
+
+        arr = [a, b, c, d]
+        path = []
+
+        1 - Fill the path with a, until sum(path) >= tar, say path = [a, a, a, ..., a].
+        2 - Pop a, and fill the path with b until sum(path) >= tar, say path = [a, a, a, ..., a, b, b, ..., b].
+        3 - Do the same on c and d.
         """
-        if low >= len(arr):
+        if not arr:
             return
         if tar < 0:
             return
@@ -42,15 +49,21 @@ class Solution:
             self.res.append(self.path[:])
             return
 
-        self.path.append(arr[low])
-        self.DFS2(arr, low, tar - arr[low])
-        self.path.pop()
-        self.DFS2(arr, low + 1, tar)
+        for i, x in enumerate(arr):
+            self.path.append(x)
+
+            # This is WRONG, since we can repeatedly choose each element.
+            # self.DFS2(arr[:i] + arr[i + 1:], tar - x)
+
+            self.DFS2(arr[i:], tar - x)
+            self.path.pop()
 
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         if not candidates:
             raise Exception("Empty Candidate List")
 
-        self.DFS(candidates, target)
-        # self.DFS2(candidates, 0, target)
+        # self.DFS(candidates, target)
+
+        self.DFS2(candidates, target)
+
         return self.res
