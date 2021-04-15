@@ -41,10 +41,10 @@
 
 
 
-2 - BFS on Graphs or Matrices
-    Can search the shortest path.
-    Need a matrix to store searched elements.
+2 - BFS on Matrices
+    Need a matrix to store searched elements, like searched = [[False] * N for _ in range(M)].
     Otherwise, BFS may stuck in infinite loops.
 
-    searched = [[False] * N for _ in range(M)]
+    Problems:
+    200(2D Array)
 """

@@ -39,5 +39,6 @@ Tips:
 
 2 - Others
     138(copy with random pointer) - see linked list
+    <TBD>146(LRU cache) - hash map and doubly linked list
     560(sub-array sum) - pre_sum[i] = sum(arr[:i+1]), sum(arr[i + 1:j + 1]) = pre_sum[j] - pre_sum[i]
 """

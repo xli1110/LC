@@ -37,27 +37,31 @@ class Solution:
         if node == p or node == q:  # 2 - reach target
             return node
 
-        l = self.DFS2(node.left, p, q)
-        r = self.DFS2(node.right, p, q)
+        L = self.DFS2(node.left, p, q)
+        R = self.DFS2(node.right, p, q)
 
-        if l is None and r is None:
+        if L is None and R is None:
             # case 1 - Nothing Found
             # p and q are not in sub-trees of node.
             return None
 
-        if l is not None and r is not None:
+        if L is not None and R is not None:
             # case 2 - Lowest Common Parent Found
             # p and q are in two sub-trees respectively, and the node is the lowest common parent.
-            # l == p and r == q
+            # L == p and R == q
             # or
-            # l == q and r == p
+            # L == q and R == p
             return node
 
         # case 3 - Higher Common Parent Found
         # p and q are in one sub-tree of node, and the node is a higher common parent.
-        # Note here l or r always represents the lowest common parent,
-        # since we return the lowest common parent at case 2 and l = self.DFS() passing the value to it.
-        return l if r is None else r
+        # Example: Assume node has L and R, and L is the lowest common parent.
+        # L is the lowest common parent
+        # => p and q are in L, node's lef sub-tree
+        # => R must be None, since we can only find ONE p and ONE q from the tree.
+        # => We return L to node's parent.
+        # => We recursively return L to the root.
+        return L if R is None else R
 
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if p is None or q is None:

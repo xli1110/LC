@@ -27,6 +27,7 @@ class Solution:
     def q_select(self, arr, low, high, k):
         if self.tar is not None:  # target found
             return
+
         i_pivot = self.partition(arr, low, high)
 
         if k == i_pivot + 1:

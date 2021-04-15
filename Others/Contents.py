@@ -28,5 +28,11 @@
 
 75. Sort Colors - <Counting Sort, Two Pointers Partition>
 
+207. <TBD>Course Schedule - <Topological Sort>
+
+208. Implement Trie (Prefix Tree) - <OOD>
+
 215. Kth Largest Element in an Array - <Quick Sort, K-sized Heap, Quick Select>
+
+238. Product of Array Except Self - <Res = Pre * Post>
 """

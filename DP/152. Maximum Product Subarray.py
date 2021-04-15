@@ -1,0 +1,18 @@
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        if not nums:
+            raise Exception("Empty Array")
+
+        res = nums[0]
+        pre_max = nums[0]
+        pre_min = nums[0]
+
+        for i in range(1, len(nums)):
+            num = nums[i]
+
+            cur_max = max(pre_max * num, pre_min * num, num)
+            cur_min = min(pre_max * num, pre_min * num, num)
+            res = max(res, cur_max)
+            pre_max = cur_max
+            pre_min = cur_min
+        return res

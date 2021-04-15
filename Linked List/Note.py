@@ -38,4 +38,5 @@ Tips:
 
 4 - Others
     138(copy with random pointer) - loop twice as storing nodes and linking them; note d.get(key, None)
+    148(sort) - merge sort; return merge(m_sort(head), m_sort(mid))
 """
