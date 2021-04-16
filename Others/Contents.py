@@ -35,4 +35,7 @@
 215. Kth Largest Element in an Array - <Quick Sort, K-sized Heap, Quick Select>
 
 238. Product of Array Except Self - <Res = Pre * Post>
+
+287. Find the Duplicate Number - <Hash Map, Binary Search, Two Pointers>
+
 """

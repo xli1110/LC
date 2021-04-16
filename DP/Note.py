@@ -95,6 +95,12 @@
     # loop
     dp[i] = max(dp[i - 1], dp[i - 2] + x)
 
+213. House Robber II
+    dp_0 traverses arr[:-1]
+    dp_1 traverse arr[1:]
+
+    return max(max(dp_0), max(dp_1))
+
 221. Maximal Square
     dp[i][j] - the maximal square's SIDE LENGTH whose bottom right corner is [i][j]
 
@@ -110,4 +116,30 @@
     dp[i][j - 1] = 3
     dp[i - 1][j - 1] = 3
     to understand the transfer function.
+
+279. <TBD>Perfect Squares
+
+300. Longest Increasing Subsequence
+    dp[i] represents the longest sub-sequence ENDING AT arr[i]
+
+    dp = [1] * len(arr)
+    for i in range(arr):
+        for j in range(i):
+            if arr[j] < arr[i]:  # update condition
+                temp_max = dp[j] + 1
+                if temp_max > dp[i]:
+                    dp[i] = temp_max
+
+309. <TBD>Best Time to Buy and Sell Stock with Cooldown
+
+322. <TBD>Coin Change
+
+337. House Robber III
+    x_0 = the maximal value if we do NOTvisit the current node
+    x_1 = the maximal value if we visit the current node
+
+    The relationship between L and R is PLUS.
+    The relationship between children and parent is like 198.
+    dp[i] = dp[i - 1] => node_0 = max(L0, L1) + max(R0, R1)
+    dp[i] = dp[i - 2] + x => node_1 = L0 + R0 + node.val
 """

@@ -43,7 +43,7 @@ class Solution:
         """
         if not arr:
             return
-        if tar < 0:
+        if tar < 0:  # do not forget this case
             return
         if tar == 0:
             self.res.append(self.path[:])
