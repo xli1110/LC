@@ -2,7 +2,7 @@ class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
         """
         1 - Generate a Dictionary
-        dic[x] = [indices], s.t. pre_sum[index] == x
+        dic[x] = [indices], s.t. pre_sum[index] = x
 
         2 - Search the Answer
         sum(arr[i + 1:j + 1]) == k

@@ -22,8 +22,9 @@ Tips:
     169(majority)
     202(happy number) - store the cycle in a set
     205(isomorphic strings)
-    242(anagram) - two dictionaries storing frequencies
+    242(valid anagram) - two dictionaries storing frequencies
     349, 350(intersection of arrays) - loop arr1: d[x] += 1; loop arr2: res.append(x), d[x] -= 1
+    438(find anagrams) - 242 compare dictionaries + sliding window
     448(disappeared numbers) - loop one: hash construction; loop two: check disappearance
 
     Model:
@@ -40,5 +41,5 @@ Tips:
 2 - Others
     138(copy with random pointer) - see linked list
     <TBD>146(LRU cache) - hash map and doubly linked list
-    560(sub-array sum) - pre_sum[i] = sum(arr[:i+1]), sum(arr[i + 1:j + 1]) = pre_sum[j] - pre_sum[i]
+    560(subarray with sum k) - see others
 """

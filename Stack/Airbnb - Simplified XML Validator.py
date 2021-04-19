@@ -17,22 +17,6 @@ Input: <a>
 Output: missing closing tag for <a>
 """
 
-"""
-Date: 2021 03 30
-Problems: Online Assignment
-Result: Pass All 12 Test Cases
-"""
-
-"""
-XML Validator
-
-Input a string, check whether it is a valid XML.
-XML contains text and tag, where text contains ASCII codes except for "<" and ">" and tag comes in two flavors <>.
-Tags can not be empty like <> or </>.
-Start Tag - <a>
-End Tag - </a>
-"""
-
 
 def validate_xml(xml):
     stack = []

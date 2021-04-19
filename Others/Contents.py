@@ -28,7 +28,7 @@
 
 75. Sort Colors - <Counting Sort, Two Pointers Partition>
 
-207. <TBD>Course Schedule - <Topological Sort>
+207. <TBD>Course Schedule - <Graph, Topological Sort>
 
 208. Implement Trie (Prefix Tree) - <OOD>
 
@@ -37,5 +37,9 @@
 238. Product of Array Except Self - <Res = Pre * Post>
 
 287. Find the Duplicate Number - <Hash Map, Binary Search, Two Pointers>
+
+399. <TBD>Evaluate Division - <Graph>
+
+560. Subarray Sum Equals K - <Pre Sum, Hash Map>
 
 """

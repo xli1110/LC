@@ -23,7 +23,6 @@ class Solution:
         if node == tar:
             self.has_found = True
             self.res.append(self.path[:])
-            return
 
         self.DFS(node.left, tar)
         self.DFS(node.right, tar)

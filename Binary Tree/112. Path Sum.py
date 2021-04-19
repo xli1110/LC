@@ -13,11 +13,6 @@ class Solution:
         self.path = []
 
     def DFS(self, node, tar):
-        """
-        Note the SLICE of self.path.
-        Otherwise, self.res is appended by a reference.
-        When the DFS return to previous invokes, self.path will be changed, and the values in self.res will also be changed.
-        """
         # base case
         if node is None:
             return
@@ -31,7 +26,6 @@ class Solution:
         if tar == 0 and node.left is None and node.right is None:  # require a LEAF node at the end
             self.has_found = True
             self.res.append(self.path[:])
-            return
 
         # GOING DOWN. Recursively process current node's children, until reaching leaf nodes.
         self.DFS(node.left, tar)

@@ -55,7 +55,7 @@
     104(depth) - postorder
     105/106(construct) - Locate i and calculate length from INORDER. See 106 annotation for details.
     110(balance) - postorder
-    112(path seeking) - self.res.append(self.path[:]) when tar found; self.path.pop() when going up
+    112/113/437(path seeking) - self.res.append(self.path[:]) when tar found; self.path.pop() when going up
     114(flatten tree) - auxiliary arr solves the traversal result
     116, 117(link next right node) - DFS(right) BEFORE DFS(left)
     226(invert) - use self.pre
