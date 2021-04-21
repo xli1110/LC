@@ -25,6 +25,5 @@ class Solution:
 
     def coinChange(self, coins: List[int], amount: int) -> int:
 
-        # self.DFS(coins, amount)
-        # return -1 if self.num is None else self.num
-
+        self.DFS(coins, amount)
+        return -1 if self.num is None else self.num

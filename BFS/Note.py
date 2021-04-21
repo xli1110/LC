@@ -6,12 +6,7 @@
     102, 103, 107(level)
     104, 111(depth) - see Binary Tree
 
-    BFS Code:
-    from collections import deque
-
-    if root is None:
-        raise Exception("xxx")
-
+    Model:
     # initialization
     res = []
     q = deque()
@@ -19,7 +14,6 @@
 
     # BFS
     while q:
-
         # level loop
         level = []
         for _ in range(len(q)):
@@ -46,5 +40,50 @@
     Otherwise, BFS may stuck in infinite loops.
 
     Problems:
-    200(2D Array)
+    200(2D array) - 2D array BFS
+    Airbnb(bomb maze) - 2D array level order BFS
+
+    Model:
+    def check_exceed(x, y, X, Y):
+        return 0 <= x < X and 0 <= y < Y
+
+    # init
+    path_length = 0
+    q = deque()
+    q.append([x_start, y_start])
+
+    # search
+    while q:
+        # level order traversal
+        for _ in range(len(q)):
+            point = q.popleft()
+            i = point[0]
+            j = point[1]
+
+            # conditions for a point
+
+            # c1 exceed
+            # c2 searched
+            # ci other conditions from the problem
+            if not self.check_exceed(i, j, X, Y):
+                continue
+            if searched[i][j]:
+                continue
+            if mat[i - 1][j] < min_dist_to_bomb:
+                continue
+            if i == x_end and j == y_end:  # reach the end
+                return path_length
+
+            # process the current point
+            searched[i][j] = True
+
+            # search 4 directions
+            q.append([i - 1, j])
+            q.append([i + 1, j])
+            q.append([i, j - 1])
+            q.append([i, j + 1])
+
+        path_length += 1  # update
+
+    return None  # no such path found
 """

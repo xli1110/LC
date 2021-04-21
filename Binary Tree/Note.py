@@ -64,4 +64,5 @@
     538(BST conversion) - inorder with self.pre_sum
     543(diameter) - postorder
     617(merge) - recall 2(add linked lists) and 106(tree construction)
+    Airbnb/Hulu(print N-ary tree) - tree construction/traversal/sort
 """
