@@ -31,7 +31,7 @@ class Solution:
         2 - Divide the list.
         3 - Recursion.
         """
-        if head is None or head.next is None:# base case
+        if head is None or head.next is None:  # base case
             return head
 
         # find the mid
@@ -53,5 +53,23 @@ class Solution:
         # merge two sorted lists
         return self.merge(self.m_sort(head), self.m_sort(mid))
 
+    def naive_sort(self, head):
+        arr = []
+        p = head
+        while p is not None:
+            arr.append(p.val)
+            p = p.next
+
+        arr.sort()
+        p = head
+        i = 0
+        while p is not None:
+            p.val = arr[i]
+            p = p.next
+            i += 1
+
+        return head
+
     def sortList(self, head: ListNode) -> ListNode:
+        return self.naive_sort(head)
         return self.m_sort(head)
