@@ -71,5 +71,5 @@ class Solution:
         return head
 
     def sortList(self, head: ListNode) -> ListNode:
-        return self.naive_sort(head)
+        # return self.naive_sort(head)
         return self.m_sort(head)
