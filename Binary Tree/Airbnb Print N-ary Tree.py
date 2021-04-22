@@ -65,6 +65,19 @@ class Problem1:
                 n1.children.append(n2)
                 n1 = n2
 
+    def node_sort(self, node):
+        """
+        Sort a node's children nodes by the lexical order.
+        Naive method, temp arr.
+        """
+        arr = [child.val for child in node.children]
+        arr.sort()
+        for i, x in enumerate(arr):
+            node.children[i].val = x
+
+        for child in node.children:
+            self.node_sort(child)
+
     def DFS_print(self, node, depth):
         if depth == 0:
             print("/")
@@ -80,7 +93,7 @@ class Problem1:
 if __name__ == "__main__":
     s_list = [
         "/bin/usr/bash",
-        "/var/test/.ssh",
+        "/var/test/spark.ssh",
         "/var/log/wifi.log",
         "/opt",
         "/xyz"
@@ -95,4 +108,8 @@ if __name__ == "__main__":
     for s in s_list:
         p1.m_tree(root, s.split("/")[1:])
 
+    # sort
+    p1.node_sort(root)
+
+    # print
     p1.DFS_print(root, 0)
