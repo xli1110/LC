@@ -1,17 +1,4 @@
 """
-----Easy----
-
-283. Move Zeroes - <Counting Sort, Two Pointers Partition>
-
-461. Hamming Distance - <Bitwise Operation>
-     Similar Problems:
-     2. Add Two Numbers
-     21. Merge Two Sorted Lists
-
-
-
-----Medium----
-
 5. Longest Palindromic Substring - <Two Pointers, Central Expansion>
    Notes:
    1 - The center has (N + N - 1) potential positions, not N.
@@ -36,10 +23,20 @@
 
 238. Product of Array Except Self - <Res = Pre * Post>
 
+283. Move Zeroes - <Counting Sort, Two Pointers Partition>
+
 287. Find the Duplicate Number - <Hash Map, Binary Search, Two Pointers>
 
 399. <TBD>Evaluate Division - <Graph>
 
+461. Hamming Distance - <Bitwise Operation>
+     Similar Problems:
+     2. Add Two Numbers
+     21. Merge Two Sorted Lists
+
 560. Subarray Sum Equals K - <Pre Sum, Hash Map>
 
+581. Shortest Unsorted Continuous Subarray - <Sort>
+
+647. Palindromic Substrings - <Two Pointers, Central Expansion>
 """
