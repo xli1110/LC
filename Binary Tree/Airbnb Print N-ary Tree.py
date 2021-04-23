@@ -69,6 +69,9 @@ class Problem1:
         """
         Sort a node's children nodes by the lexical order.
         Naive method, temp arr.
+
+        TBH, it sucks as swapping parent nodes' values.
+        Then, the parent-children relationship will not hold.
         """
         arr = [child.val for child in node.children]
         arr.sort()
@@ -109,7 +112,7 @@ if __name__ == "__main__":
         p1.m_tree(root, s.split("/")[1:])
 
     # sort
-    p1.node_sort(root)
+    # p1.node_sort(root)
 
     # print
     p1.DFS_print(root, 0)
