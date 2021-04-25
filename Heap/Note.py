@@ -17,6 +17,6 @@ Tips:
 
     Problems:
     703(kth largest in a stream)
-    1046
+    1046/Amazon Fulfillment Builder - heap + combination rule
     Offer - 41(median in stream) - two heaps
 """

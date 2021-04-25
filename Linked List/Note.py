@@ -3,8 +3,13 @@ Tips:
     1 - dummy = Node(None)
         dummy.next = head  # do not forget this
     2 - always check whether the node is None before visiting its attributes
-
-
+    3 - reverse/concatenate: temp + iterate + operation
+        while p2 is not None:
+            temp1 = p1
+            temp2 = p2
+            p1 = temp2
+            p2 = temp2.next
+            temp1.next = temp2
 
 1 - Linked List Design
 
@@ -22,7 +27,7 @@ Tips:
     203(remove val) - p1 = dummy, p2 = head; loop: p1.next = p2.next, p2 = p2.next or p1 = p1.next, p2 = p2.next
     206(reserve) - p1 = None, p2 = head; loop: t = p2
     234(palindrome)
-    328(odd/even) - dummy_odd, p1; dummy_even p2; p1.next = dummy_even.next, p2.next = None
+    328(odd even transform) - dummy_odd, p1; dummy_even p2; p1.next = dummy_even.next, p2.next = None
 
 
 
@@ -39,4 +44,5 @@ Tips:
 4 - Others
     138(copy with random pointer) - loop twice as storing nodes and linking them; note d.get(key, None)
     148(sort) - merge sort; return merge(m_sort(head), m_sort(mid))
+    Hulu(transform) - find mid; reverse; concatenate. see 328 similar
 """

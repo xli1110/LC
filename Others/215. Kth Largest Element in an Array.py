@@ -5,38 +5,42 @@ class Solution:
     def __init__(self):
         self.tar = None
 
-    def partition(self, arr, low, high):
+    def partition(self, arr, low, high, pivot):
+        """
+        Assume pivot = arr[high]
+        """
         i_less = low
-        pivot = arr[high]
 
         for i in range(low, high):
             if arr[i] <= pivot:  # note the equal
                 arr[i], arr[i_less] = arr[i_less], arr[i]
-                i_less += 1
-        arr[i_less], arr[high] = arr[high], arr[i_less]
+                i_less += 1  # do not forget this
+        arr[i_less], arr[high] = arr[high], arr[i_less]  # put the pivot into the mid position
         return i_less
 
     def q_sort(self, arr, low, high):
         if high - low <= 0:  # high - low <= 0 <==> sub-array length <= 1
             return
 
-        i_pivot = self.partition(arr, low, high)
-        self.q_sort(arr, low, i_pivot - 1)  # note index
-        self.q_sort(arr, i_pivot + 1, high)  # as above
+        pivot = arr[high]
+        mid = self.partition(arr, low, high, pivot)
+        self.q_sort(arr, low, mid - 1)  # note index
+        self.q_sort(arr, mid + 1, high)  # as above
 
     def q_select(self, arr, low, high, k):
         if self.tar is not None:  # target found
             return
 
-        i_pivot = self.partition(arr, low, high)
+        pivot = arr[high]
+        mid = self.partition(arr, low, high, pivot)
 
-        if k == i_pivot + 1:
-            self.tar = arr[i_pivot]
+        if k == mid + 1:
+            self.tar = arr[mid]
             return
-        elif k < i_pivot + 1:
-            self.q_select(arr, low, i_pivot - 1, k)
+        elif k < mid + 1:
+            self.q_select(arr, low, mid - 1, k)
         else:
-            self.q_select(arr, i_pivot + 1, high, k)
+            self.q_select(arr, mid + 1, high, k)
 
     def heap_select(self, arr, k):
         """
