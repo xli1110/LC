@@ -1,6 +1,6 @@
 class Node:
-    def __init__(self):
-        self.val = None
+    def __init__(self, val):
+        self.val = val
         self.next = None
 
 
@@ -43,15 +43,73 @@ class Problem1:
         p1 = None
         p2 = head
         while p2 is not None:
-            t = p2
+            temp1 = p1
+            temp2 = p2
+            p1 = temp2
             p2 = p2.next
-            t.next = p1
-            p1 = t
+            temp2.next = temp1
         return p1
 
     def find_mid(self, head):
         p1 = head
+        p2 = head.next
+        while p2 is not None and p2.next is not None:
+            p1 = p1.next
+            p2 = p2.next.next
+        return p1
 
-    def transform(self,head):
+    def transform(self, head):
         if head is None:
             raise Exception("Empty List")
+        if head.next is None:
+            return head
+
+        # find mid
+        temp = self.find_mid(head)
+        mid = temp.next
+        temp.next = None
+
+        # reverse the second half
+        mid = self.reverse_list(mid)
+
+        # concatenate
+        # use two pointers for iteration
+        p1 = head
+        p2 = mid
+        while p2 is not None:
+            # temp
+            temp1 = p1
+            temp2 = p2
+            # iterate
+            p1 = temp2
+            p2 = temp1.next
+            # link
+            temp1.next = temp2
+
+        return head
+
+
+def make_list(arr):
+    dummy = Node(None)
+    p = dummy
+    for x in arr:
+        n = Node(x)
+        p.next = n
+        p = p.next
+    return dummy.next
+
+
+def print_list(head):
+    p = head
+    while p is not None:
+        print(p.val)
+        p = p.next
+
+
+if __name__ == "__main__":
+    # arr = [1, 2, 3, 4, 5]
+    arr = [1, 2, 3, 4, 5, 6]
+    head = make_list(arr)
+
+    problem1 = Problem1()
+    print_list(problem1.transform(head))

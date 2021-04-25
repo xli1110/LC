@@ -11,9 +11,10 @@ class Solution:
         p2 = head
 
         while p2 is not None:
-            t = p2
+            temp1 = p1
+            temp2 = p2
+            p1 = temp2
             p2 = p2.next
-            t.next = p1
-            p1 = t
+            temp2.next = temp1
 
         return p1

@@ -35,13 +35,10 @@ class Solution:
             return head
 
         # find the mid
-        # Case 1: A -> B -> C -> D -> E
-        # Case 2: A -> B -> C -> D -> E -> F
-        # Use dummy, so that slow stops at C, else it stops at D in case 2.
-        dummy = ListNode(None)
-        dummy.next = head
-        slow = dummy
-        fast = dummy
+        # Case 1: A -> B -> C -> D -> E, slow stops at C
+        # Case 2: A -> B -> C -> D -> E -> F, slow stops at C
+        slow = head
+        fast = head.next
         while fast is not None and fast.next is not None:
             slow = slow.next
             fast = fast.next.next
