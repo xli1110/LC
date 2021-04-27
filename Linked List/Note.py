@@ -1,7 +1,7 @@
 """
 Tips:
     1 - Use dummy when we need to generate a NEW list.
-        dummy = Node()
+        dummy = Node(None)
         dummy.next = head  # do not forget this
         xxxxxxxxx
         return dummy.next

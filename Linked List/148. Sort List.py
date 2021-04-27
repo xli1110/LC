@@ -10,7 +10,7 @@ class ListNode:
 
 class Solution:
     def merge(self, h1, h2):
-        dummy = ListNode()
+        dummy = ListNode(None)
         p = dummy
         p1 = h1
         p2 = h2
