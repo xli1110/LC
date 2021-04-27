@@ -1,7 +1,10 @@
 """
 Tips:
-    1 - dummy = Node(None)
+    1 - Use dummy when we need to generate a NEW list.
+        dummy = Node()
         dummy.next = head  # do not forget this
+        xxxxxxxxx
+        return dummy.next
     2 - always check whether the node is None before visiting its attributes
     3 - reverse/concatenate: temp + iterate + operation
         while p2 is not None:

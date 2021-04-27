@@ -1,4 +1,7 @@
 # Definition for singly-linked list.
+import random
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -7,7 +10,7 @@ class ListNode:
 
 class Solution:
     def merge(self, h1, h2):
-        dummy = ListNode(None)
+        dummy = ListNode()
         p = dummy
         p1 = h1
         p2 = h2
@@ -70,3 +73,32 @@ class Solution:
     def sortList(self, head: ListNode) -> ListNode:
         # return self.naive_sort(head)
         return self.m_sort(head)
+
+
+def make_list(arr):
+    dummy = ListNode()
+    p = dummy
+    for x in arr:
+        n = ListNode(x)
+        p.next = n
+        p = p.next
+    return dummy.next
+
+
+def print_list(head):
+    arr = []
+    p = head
+    while p is not None:
+        arr.append(p.val)
+        p = p.next
+    print(arr)
+
+
+if __name__ == "__main__":
+    arr = [random.randint(1, 10) for _ in range(10)]
+    head = make_list(arr)
+    print_list(head)
+
+    sol = Solution()
+    head_sort = sol.sortList(head)
+    print_list(head_sort)
