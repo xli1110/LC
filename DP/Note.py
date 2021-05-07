@@ -18,14 +18,14 @@
 
 53. Maximum Subarray
     # init
-    dp = [arr[0]]
+    dp = [None] * len(nums)
+    dp[0] = nums[0]
 
     # loop
-    for i in range(1, len(arr)):
-        if dp[i - 1] < 0:
-            dp.append(arr[i])
-        else:
-            dp.append(dp[i - 1] + arr[i])
+    for i in range(1, len(nums)):
+        dp[i] = nums[i]
+        if dp[i - 1] > 0:
+            dp[i] += dp[i - 1]
 
 55. Jump Game
     # init
@@ -50,6 +50,9 @@
 
 70. Climbing Stairs
     dp[i] = dp[i - 1] + dp[i - 2]
+
+91. Decode Ways
+    70 + Two Conditions
 
 96. Unique Binary Search Trees
     Suck

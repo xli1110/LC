@@ -13,7 +13,7 @@ class Solution:
         1 - Divide the matrix into nested circles with side_length.
         2 - For each circle, swap X1-X2-X3-X4.
 
-        i = (n - side_length) // 2  # the current index of row
+        i = (n - side_length) >> 1  # the current index of row
 
         j in range(i, n - i - 1)  # the current index of column
 
@@ -37,11 +37,11 @@ class Solution:
                 matrix[j][n - 1 - i], \
                 matrix[n - 1 - i][n - 1 - j], \
                 matrix[n - 1 - j][i] \
-                    = \
-                    matrix[n - 1 - j][i], \
-                    matrix[i][j], \
-                    matrix[j][n - 1 - i], \
-                    matrix[n - 1 - i][n - 1 - j]
+                = \
+                matrix[n - 1 - j][i], \
+                matrix[i][j], \
+                matrix[j][n - 1 - i], \
+                matrix[n - 1 - i][n - 1 - j]
 
             side_length -= 2
 
@@ -55,9 +55,8 @@ if __name__ == "__main__":
     for row in mat:
         print(row)
 
-    sol.rotate(mat)
-
     print("\n")
 
+    sol.rotate(mat)
     for row in mat:
         print(row)

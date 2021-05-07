@@ -20,21 +20,25 @@ class Codec:
         self.DFS(node.right)
 
     def deDFS(self, arr):
+        """
+        Note pop(0) at alpha.
+        Let data = [1, N, 2, N, N].
+        To build the left subtree, the parameter is [N, 2, N, N].
+        To build the right tree, the parameter should be [2, N, N].
+        However, if we do not pop arr[0] out here, the parameter will still be [N, 2, N, N].
+        """
         if arr[0] == "N":  # no need to consider empty arr, the end of arr is always an "N"
             return None
 
+        # generate node
         node = TreeNode(int(arr[0]))
-
         arr.pop(0)
+        # generate left
         node.left = self.deDFS(arr)
-
-        arr.pop(0)
-        # note this pop(0)
-        # Let data = [1, N, 2, N, N].
-        # To build the left subtree, the parameter is [N, 2, N, N].
-        # To build the right tree, the parameter should be [2, N, N].
-        # However, if we do not pop arr[0] out here, the parameter will still be [N, 2, N, N].
+        arr.pop(0)  # alpha
+        # generate right
         node.right = self.deDFS(arr)
+
         return node
 
     def serialize(self, root):

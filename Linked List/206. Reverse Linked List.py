@@ -13,7 +13,7 @@ class Solution:
         while p2 is not None:
             temp1 = p1
             temp2 = p2
-            p1 = temp2
+            p1 = temp2  # Note we can NOT use p1 = p1.next, since p1 is None at initialization.
             p2 = p2.next
             temp2.next = temp1
 

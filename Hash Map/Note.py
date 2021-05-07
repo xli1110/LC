@@ -40,6 +40,6 @@ Tips:
 
 2 - Others
     138(copy with random pointer) - see linked list
-    <TBD>146(LRU cache) - hash map and doubly linked list
+    146(LRU cache) - hash map and doubly linked list
     560(subarray with sum k) - see others
 """

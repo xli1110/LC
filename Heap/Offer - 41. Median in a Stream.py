@@ -12,7 +12,7 @@ class MedianFinder:
     def addNum(self, num: int) -> None:
         """
         1 - Note the NEGATIVE when operating elements from h_less.
-        2 - Avoid compare num and heap root, because this will be too complex.
+        2 - Avoid comparing num and heap root, because this will be too complex.
             Instead, repeatedly invoke push and pop, implementing the heap order property.
         """
         if len(self.h_great) != len(self.h_less):  # add an element to h_less

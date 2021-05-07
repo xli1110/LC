@@ -5,7 +5,7 @@ Tips:
         dummy.next = head  # do not forget this
         xxxxxxxxx
         return dummy.next
-    2 - always check whether the node is None before visiting its attributes
+    2 - Always check whether the node is None before visiting its attributes.
     3 - reverse/concatenate: temp + iterate + operation
         while p2 is not None:
             temp1 = p1
@@ -13,6 +13,8 @@ Tips:
             p1 = temp2
             p2 = temp2.next
             temp1.next = temp2
+
+
 
 1 - Linked List Design
 
@@ -28,7 +30,7 @@ Tips:
     21(merge) - dummy, p = dummy, traverse lists, p = l1 if l2 is None else l2
     61(rotate) - calculate k % length; find new head/tail; link tail to head, link new tail to None
     203(remove val) - p1 = dummy, p2 = head; loop: p1.next = p2.next, p2 = p2.next or p1 = p1.next, p2 = p2.next
-    206(reserve) - p1 = None, p2 = head; loop: t = p2
+    206(reserve) - p1 = None, p2 = head
     234(palindrome)
     328(odd even transform) - dummy_odd, p1; dummy_even p2; p1.next = dummy_even.next, p2.next = None
 

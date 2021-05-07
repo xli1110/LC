@@ -20,7 +20,7 @@ class Solution:
                 while stack and stack[-1] in digits:  # note stack may be empty
                     num = stack.pop() + num
 
-                sub_string = temp * int(num)
+                sub_string = temp * int(num) if not num else temp
 
                 if num_left != num_right:
                     # sub_string is between brackets, [xx num[temp] xxx] => [xx sub_string xx]

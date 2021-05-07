@@ -14,7 +14,7 @@
 
     # BFS
     while q:
-        # level loop
+        # level order loop
         level = []
         for _ in range(len(q)):
 
@@ -23,7 +23,6 @@
             level.append(node.val)
 
             # loop children
-            # add new nodes - note the condition may vary
             if node.left is not None:
                 q.append(node.left)
             if node.right is not None:
@@ -60,11 +59,11 @@
             i = point[0]
             j = point[1]
 
-            # conditions for a point
+            # check termination conditions for a point
+            # c1 - exceed
+            # c2 - searched
+            # ci - other conditions from the problem
 
-            # c1 exceed
-            # c2 searched
-            # ci other conditions from the problem
             if not self.check_exceed(i, j, X, Y):
                 continue
             if searched[i][j]:

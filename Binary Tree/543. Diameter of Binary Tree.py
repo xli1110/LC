@@ -11,14 +11,22 @@ class Solution:
         self.diameter = 0
 
     def DFS(self, node):
+        """
+        cur_dia = L + R
+
+        return = max(L, R) + 1
+        """
         if node is None:
             return 0
-        l = self.DFS(node.left)
-        r = self.DFS(node.right)
 
-        if l + r > self.diameter:
-            self.diameter = l + r
-        return max(l, r) + 1
+        L = self.DFS(node.left)
+        R = self.DFS(node.right)
+
+        cur_dia = L + R
+        if cur_dia > self.diameter:
+            self.diameter = cur_dia
+
+        return max(L, R) + 1
 
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
         """

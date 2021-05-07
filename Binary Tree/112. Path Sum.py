@@ -23,7 +23,7 @@ class Solution:
         self.path.append(node.val)
         tar -= node.val  # do not forget this
 
-        if tar == 0 and node.left is None and node.right is None:  # require a LEAF node at the end
+        if tar == 0 and node.left is None and node.right is None:
             self.has_found = True
             self.res.append(self.path[:])
 

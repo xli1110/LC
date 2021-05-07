@@ -54,9 +54,11 @@ class Solution:
 
         # case 3 - Higher Common Parent Found
         # p and q are in one sub-tree of node, and the node is a higher common parent.
-        # Example: Assume node has L and R, and L is the lowest common parent.
+        #
+        # Example:
+        # Assume node has L and R, and L is the lowest common parent.
         # L is the lowest common parent
-        # => p and q are in L, node's lef sub-tree
+        # => p and q are in L, node's left sub-tree
         # => R must be None, since we can only find ONE p and ONE q from the tree.
         # => We return L to node's parent.
         # => We recursively return L to the root.

@@ -10,7 +10,6 @@ class Solution:
         Assume pivot = arr[high]
         """
         i_less = low
-
         for i in range(low, high):
             if arr[i] <= pivot:  # note the equal
                 arr[i], arr[i_less] = arr[i_less], arr[i]
