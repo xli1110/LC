@@ -19,25 +19,27 @@
 
         - Pre (M -> L -> R)
         while node is not None:
-            res.append(node.val)  # visit
-            stack.append(node.right)  # push R
-            node = node.left  # move to L
-        node = stack.pop()  # pop
+            res.append(node.val)
+            stack.append(node)
+            node = node.left
+        node = stack.pop()
+        node = node.right
 
         - In (L -> M -> R)
         while node is not None:
-            stack.append(node)  # push M
-            node = node.left  # move to L
-        node = stack.pop()  # pop
-        res.append(node.val)  # visit
-        node = node.right  # move to R
+            stack.append(node)
+            node = node.left
+        node = stack.pop()
+        res.append(node.val)
+        node = node.right
 
         - Post (M -> R -> L, return [::-1])
         while node is not None:
-            res.append(node.val)  # visit
-            stack.append(node.left)  # push L
-            node = node.right  # move to R
-        node = stack.pop()  # pop
+            res.append(node.val)
+            stack.append(node)
+            node = node.right
+        node = stack.pop()
+        node = node.left
 
     # return
     Pre/In return res; Post return res[::-1]

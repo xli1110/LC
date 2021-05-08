@@ -7,7 +7,7 @@
 
 11. Container With Most Water - <Two Pointers>
 
-15. 3Sum - <Sort, Two Pointers, Duplicates>
+15. 3Sum - <Sort, Two Pointers, Avoid Duplicates>
 
 48. Rotate Image - <2D-Array>
 
@@ -15,9 +15,13 @@
 
 75. Sort Colors - <Counting Sort, Two Pointers Partition>
 
+146. LRU Cache - <Hash Map, Doubly Linked List, OOD>
+
+151. Reverse Words in a String - <String, Deque>
+
 207. <TBD>Course Schedule - <Graph, Topological Sort>
 
-208. Implement Trie (Prefix Tree) - <OOD>
+208. Implement Trie (Prefix Tree) - <Tree, Array, OOD>
 
 215. Kth Largest Element in an Array - <Quick Sort, K-sized Heap, Quick Select (use self.tar)>
 

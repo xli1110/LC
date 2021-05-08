@@ -4,6 +4,7 @@ Tips:
         d = {}
         d[key] = value
         dic.get(key, default)
+        dic.pop(key)
         list(dic.keys())
         list(dic.values())
     2 - set
@@ -35,11 +36,4 @@ Tips:
         else:
             xxx
         dic[x] = i
-
-
-
-2 - Others
-    138(copy with random pointer) - see linked list
-    146(LRU cache) - hash map and doubly linked list
-    560(subarray with sum k) - see others
 """

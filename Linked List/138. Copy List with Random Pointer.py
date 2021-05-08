@@ -9,11 +9,14 @@ class Node:
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
         d = {}
+
+        # store
         p = head
         while p is not None:
             d[p] = Node(p.val)
             p = p.next
 
+        # link
         p = head
         while p is not None:
             d[p].next = d.get(p.next, None)

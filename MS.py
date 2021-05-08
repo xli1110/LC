@@ -14,12 +14,23 @@
 47. Permutations II - <DFS>
 543. Diameter of Binary Tree - <Binary Tree>
 
+
 <11 - 20>
 22. Generate Parentheses - <DFS>
-146. LRU Cache - <Hash Map>
+146. LRU Cache - <Others>
+1. Two Sum - <Hash Map>
+151. Reverse Words in a String - <Others>
+138. Copy List with Random Pointer - <Linked List>
+
+240. Search a 2D Matrix II - <Others>
+69. Sqrt(x) - <Binary Search>
+15. 3Sum - <Others>
+121. Best Time to Buy and Sell Stock - <DP>
+94. Binary Tree Inorder Traversal - <Binary Tree>
 
 
+<21 - 30>
+450. Delete Node in a BST - <Binary Tree>
 
-----------Time Order----------
 
 """

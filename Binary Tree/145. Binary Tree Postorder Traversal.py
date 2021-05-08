@@ -25,9 +25,11 @@ class Solution:
         while node is not None or stack:
             while node is not None:
                 res.append(node.val)
-                stack.append(node.left)
+                stack.append(node)
                 node = node.right
             node = stack.pop()
+            node = node.left
+        
         return res[::-1]
 
     def postorderTraversal(self, root: TreeNode) -> List[int]:
