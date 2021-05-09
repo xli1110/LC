@@ -7,8 +7,8 @@ class Solution:
         2 - Search the Answer
         sum(arr[i + 1:j + 1]) == k
         <=> pre_sum[j] - pre_sum[i] == k
-        <=> temp_sum - pre_sum[i] == k
-        <=> temp_sum - k in dic
+        <=> pre_sum[j] - pre_sum[i] == k
+        <=> pre_sum[j] - k in dic
 
         for i, x in enumerate(arr),
         d[x] = [indices] implies potential sub-arrays arr[index + 1:i + 1] with sum == k.
@@ -21,20 +21,20 @@ class Solution:
 
         res = 0
         dic = {}
-        temp_sum = 0
+        pre_sum = 0
         for i, x in enumerate(nums):
-            temp_sum += x
+            pre_sum += x
 
             # search target
-            if temp_sum == k:
+            if pre_sum == k:
                 res += 1
-            if temp_sum - k in dic:
-                res += len(dic[temp_sum - k])
+            if pre_sum - k in dic:
+                res += len(dic[pre_sum - k])
 
             # upgrade the dic
-            if temp_sum not in dic:
-                dic[temp_sum] = [i]
+            if pre_sum not in dic:
+                dic[pre_sum] = [i]
             else:
-                dic[temp_sum].append(i)
+                dic[pre_sum].append(i)
 
         return res

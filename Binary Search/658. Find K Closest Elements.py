@@ -4,21 +4,20 @@ class Solution:
         O(logN + k)
         O(k)
 
-        step 1 - empty arr? 0 < k < len(arr)?
-        step 2 - binary search the target
-        step 3 - determine the closest position, be careful for exceeding cases
-        step 4 - BFS starts at the position, note the loop condition - similar to merge two linked lists
+        step 0 - Corner Cases
+        step 1 - binary search the target
+        step 2 - determine the closest position, be careful for exceeding cases
+        step 3 - BFS starts at the position, note the loop condition
         """
+        # step 0 - corner cases
         if not arr:
             raise Exception("Empty Array")
-
         if k > len(arr) or k < 0:
             raise Exception("Invalid k, {0} > length of array.".format(k))
-
         if k == 0:
             return []
 
-        # search the potential position
+        # step 1 - binary search
         low = 0
         high = len(arr) - 1
         has_found = False
@@ -32,7 +31,7 @@ class Solution:
             else:
                 high = mid - 1
 
-        # determine the position of the closest position
+        # step 2 - determine the position of the closest position
         if has_found:
             position = mid
         else:
@@ -42,10 +41,11 @@ class Solution:
             elif low > len(arr) - 1:
                 position = high
             else:
-                # note 1 - after loop, low < high always holds
+                # note 1 - after loop, low > high always holds
                 # note 2 - we use strictly less, arr = [1, 3], tar = 2, we should return 1 as requested
                 position = low if abs(arr[low] - x) < abs(arr[high] - x) else high
 
+        # step 3 - BFS
         # search the result with two pointers
         # initialize as [..., low, position, high, ...]
         # return res = arr[low + 1:high] at last

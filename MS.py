@@ -1,6 +1,5 @@
 """
-----------Frequency Order----------
-
+----------Problems in Frequency Order----------
 <1 - 10>
 215. Kth Largest Element in an Array - <Others>
 236. Lowest Common Ancestor of a Binary Tree - <Binary Tree>
@@ -31,6 +30,14 @@
 
 <21 - 30>
 <TBD>450. Delete Node in a BST - <Binary Tree>
+468. Validate IP Address - <Others>
+<TBD>72. Edit Distance - <DP>
+39. Combination Sum - <DFS>
+<TBD>51. N-Queens - <DFS>
 
-
+153. Find Minimum in Rotated Sorted Array - <Binary Search>
+3. Longest Substring Without Repeating Characters - <DP>
+36. Valid Sudoku - <Hash Map>
+162. Find Peak Element - <Binary Search>
+560. Subarray Sum Equals K - <Others>
 """
