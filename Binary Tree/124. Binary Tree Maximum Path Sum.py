@@ -15,9 +15,9 @@ class Solution:
         Recall 53 and 543.
 
         cur_val - 53
-        If L or R is positive, then it contributes to the result, adding it.
+        If L or R is positive, then it CONTRIBUTES to the result, adding it.
 
-        return - 543
+        return_val - 543
         max(L + val, R + val, val)
         <=>
         max(L, R) + val if max(L, R) > 0 else val

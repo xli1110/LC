@@ -1,7 +1,8 @@
 """
 Tips:
-    1 - Use dummy when we need to generate a NEW list.
+    1 - Use dummy for convenience.
         dummy = Node(None)
+        p = dummy
         dummy.next = head  # do not forget this
         xxxxxxxxx
         return dummy.next

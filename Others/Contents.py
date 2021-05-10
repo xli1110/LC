@@ -46,5 +46,5 @@
 
 647. Palindromic Substrings - <Two Pointers, Central Expansion>
 
-Hulu. Tricky Quick Sort
+Hulu. Tricky Quick Sort - <Sort>
 """

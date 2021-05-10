@@ -49,10 +49,6 @@ class Solution:
         # construct
         node = TreeNode(val)  # node
 
-        # WRONG, low and high VARY during the recursion!
-        # node.left = self.DFS(inorder, postorder, 0, i - 1, 0, i - 1)
-        # node.right = self.DFS(inorder, postorder, i + 1, len(inorder) - 1, i, len(postorder) - 2)
-
         node.left = self.DFS(
             inorder, postorder,
             in_low,

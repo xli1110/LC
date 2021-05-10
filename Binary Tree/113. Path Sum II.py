@@ -28,7 +28,7 @@ class Solution:
             return
 
         self.path.append(node.val)
-        if node.left is None and node.right is None and tar == node.val:
+        if node.left is None and node.right is None and tar - node.val == 0:
             self.res.append(self.path[:])
 
         self.DFS(node.left, tar - node.val)
