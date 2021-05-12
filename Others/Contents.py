@@ -40,11 +40,15 @@
 
 468. Validate IP Address - <String>
 
-560. Subarray Sum Equals K - <Pre Sum, Hash Map>
+560. Subarray Sum Equals K - <Array, Pre Sum + Hash Map>
 
 581. Shortest Unsorted Continuous Subarray - <Sort>
 
 647. Palindromic Substrings - <Two Pointers, Central Expansion>
+
+Amazon. Encode String - <String>
+
+Amazon.
 
 Hulu. Tricky Quick Sort - <Sort>
 """
