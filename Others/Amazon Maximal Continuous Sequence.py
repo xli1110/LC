@@ -12,7 +12,7 @@ O(N) Time
 
 Ask: Element type.
 Ans: Integer.
-This implies hash map search.
+This implies hash map search d[x - 1] and d[x + 1].
 """
 
 

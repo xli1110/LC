@@ -156,4 +156,6 @@
 494. <TBD>Target Sum
 
 621. <TBD>Task Scheduler
+
+Microsoft. Maximal Uncontinuous Sequence
 """

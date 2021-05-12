@@ -23,7 +23,7 @@
 
 208. Implement Trie (Prefix Tree) - <Tree, Array, OOD>
 
-215. Kth Largest Element in an Array - <Quick Sort, K-sized Heap, Quick Select (use self.tar)>
+215. Kth Largest Element in an Array - <Quick Sort; K-sized Heap; Quick Select (use self.tar)>
 
 238. Product of Array Except Self - <Res = Pre * Post>
 
@@ -40,7 +40,7 @@
 
 468. Validate IP Address - <String>
 
-560. Subarray Sum Equals K - <Array, Pre Sum + Hash Map>
+560. Subarray Sum Equals K - <Array, Pre Sum, Hash Map>
 
 581. Shortest Unsorted Continuous Subarray - <Sort>
 
@@ -48,7 +48,7 @@
 
 Amazon. Encode String - <String>
 
-Amazon.
+Amazon. Maximal Continuous Sequence - <Array, Hash Map>
 
 Hulu. Tricky Quick Sort - <Sort>
 """
