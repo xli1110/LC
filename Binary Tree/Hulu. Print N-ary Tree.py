@@ -4,7 +4,7 @@ class Node:
         self.children = []
 
 
-class Problem1:
+class Problem:
     """
     Print N-ary Tree
 
@@ -54,7 +54,7 @@ class Problem1:
 
 
 if __name__ == "__main__":
-    sol = Problem1()
+    sol = Problem()
 
     r = sol.mNode("root", [
         sol.mNode("folder1", [

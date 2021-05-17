@@ -4,7 +4,7 @@ class Node:
         self.children = []
 
 
-class Problem1:
+class Problem:
     """
     TBD: Sort children by their values' lexical order.
 
@@ -138,7 +138,7 @@ if __name__ == "__main__":
         "/opt",
         "/xyz"
     ]
-    p1 = Problem1()
+    p1 = Problem()
 
     # make the root
     root = Node()

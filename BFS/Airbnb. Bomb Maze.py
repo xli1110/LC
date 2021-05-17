@@ -1,7 +1,7 @@
 from collections import deque
 
 
-class Problem1:
+class Problem:
     """
     2D Matrix Path with Restrictions
 
@@ -227,7 +227,7 @@ if __name__ == "__main__":
     Y = 6
     bombs = [[1, 2], [2, 3]]
 
-    p1 = Problem1()
+    p1 = Problem()
 
     # step 1: compute the distance matrix, O(XYN)
     mat = p1.generate_mat(bombs, X, Y)

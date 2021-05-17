@@ -1,4 +1,4 @@
-class Problem1:
+class Problem:
     """
     Assume we have two lists of screws and bolts respectively as below.
     screw = [s1, s2, ..., sN]
@@ -84,7 +84,7 @@ class Problem1:
 
 
 if __name__ == "__main__":
-    p1 = Problem1()
+    p1 = Problem()
     p1.q_sort(p1.arr1, p1.arr2, 0, len(p1.arr1) - 1, 0, len(p1.arr2) - 1)
 
     print(p1.arr1)

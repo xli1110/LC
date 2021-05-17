@@ -4,7 +4,7 @@ class Node:
         self.next = None
 
 
-class Problem1:
+class Problem:
     """
     Given a singly linked list.
     1 -> 2 -> 3 -> ... -> N - 1 -> N
@@ -111,5 +111,5 @@ if __name__ == "__main__":
     arr = [1, 2, 3, 4, 5, 6]
     head = make_list(arr)
 
-    problem1 = Problem1()
+    problem1 = Problem()
     print_list(problem1.transform(head))
