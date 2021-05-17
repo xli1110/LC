@@ -1,12 +1,5 @@
 """
-1 - Design
-
-    Problems:
-    155(min stack)
-
-
-
-2 - Pattern Matching
+1 - Pattern Matching
 
     Model:
     stack = []
@@ -24,7 +17,7 @@
 
 
 
-3 - Monotonic Stack
+2 - Monotonic Stack
     Four Steps: mono; res; push; ite
     Loop from the End:
         monotonic stack with x >= arr[stack[-1]]

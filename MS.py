@@ -48,4 +48,6 @@ Real Interview
 36. Valid Sudoku - <Hash Map>
 162. Find Peak Element - <Binary Search>
 560. Subarray Sum Equals K - <Others>
+
+<31 - 40>
 """

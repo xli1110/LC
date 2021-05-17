@@ -17,14 +17,7 @@ Tips:
 
 
 
-1 - Linked List Design
-
-    Problems:
-    707(ADT)
-
-
-
-2 - Classic Linked List Problems
+1 - Classic Linked List Problems
 
     Problems:
     2(add linked lists) - while l1 or l2; node = ListNode((v1 + v2 + carry) % 10, None); carry = (v1 + v2 + carry) // 10
@@ -37,7 +30,7 @@ Tips:
 
 
 
-3 - Two Pointers (Fast and Slow)
+2 - Two Pointers (Fast and Slow)
 
     Problems:
     19(remove nth from end) - p1 moves n steps from dummy; p1 and p2 move to the end until p1 is None
@@ -47,7 +40,7 @@ Tips:
 
 
 
-4 - Others
+3 - Others
     138(copy with random pointer) - loop twice store + link; note d.get(key, None)
     148(sort) - merge sort; return merge(m_sort(head), m_sort(mid))
     Hulu(transform) - find mid; reverse; concatenate. see 328 similar

@@ -7,6 +7,9 @@ class Node:
 
 
 class LRUCache:
+    """
+    Hash Map + Doubly Linked List
+    """
 
     def __init__(self, capacity: int):
         """

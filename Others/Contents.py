@@ -15,8 +15,6 @@
 
 75. Sort Colors - <Counting Sort, Two Pointers Partition>
 
-146. LRU Cache - <Hash Map, Doubly Linked List, OOD>
-
 151. Reverse Words in a String - <String, Deque>
 
 207. <TBD>Course Schedule - <Graph, Topological Sort>
@@ -48,7 +46,7 @@
 
 Amazon. Encode String - <String>
 
-Amazon. Maximal Continuous Sequence - <Array, Hash Map>
+Amazon. Maximum Continuous Sequence - <Array, Hash Map>
 
 Hulu. Tricky Quick Sort - <Sort>
 """

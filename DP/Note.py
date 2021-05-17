@@ -157,5 +157,5 @@
 
 621. <TBD>Task Scheduler
 
-Microsoft. Maximal Uncontinuous Sequence
+Microsoft. Maximum Uncontinuous Sequence
 """
