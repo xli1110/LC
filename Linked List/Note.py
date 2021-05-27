@@ -13,8 +13,8 @@ Tips:
             temp2 = p2
             p1 = temp2
             p2 = temp2.next
-            temp1.next = temp2
-
+            temp2.next = temp1
+        return p1
 
 
 1 - Classic Linked List Problems

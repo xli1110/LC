@@ -47,6 +47,7 @@
         return 0 <= x < X and 0 <= y < Y
 
     # init
+    searched = [[False] * N for _ in range(M)]  # note this
     path_length = 0
     q = deque()
     q.append([x_start, y_start])
