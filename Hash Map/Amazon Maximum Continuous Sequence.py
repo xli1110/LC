@@ -18,16 +18,20 @@ This implies hash map search d[x - 1] and d[x + 1].
 
 def max_continuous_length(arr):
     """
-    d = {x: [1, x, x] for x in arr}
+    init
+    d = {x: [x, x] for x in arr}
 
     key = element
-    val = [start, end]
+    val = [start val of the continuous seq, end val of the continuous seq]
 
     Example:
-    arr = [3, 1, 0]
+    arr = [1, 3, 0, -1]
+    After we loop the array, we have:
     d[3] = [3, 3]
-    d[1] = [0, 1]
-    d[0] = [0, 1]
+    d[1] = [-1, 1]
+    d[0] = [-1, 1]
+    d[-1] = [-1, 1]
+    So the maximum length is (1 - (-1)) + 1 = 3.
     """
     if not arr:
         raise Exception("Empty Array")

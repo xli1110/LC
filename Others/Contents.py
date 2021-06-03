@@ -46,8 +46,6 @@
 
 Amazon. Encode String - <String>
 
-Amazon. Maximum Continuous Sequence - <Array, Hash Map>
-
 Hulu. Tricky Quick Sort - <Sort>
 
 Microsoft. Binary Operations - <String>

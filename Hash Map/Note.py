@@ -27,6 +27,8 @@ Tips:
     349, 350(intersection of arrays) - loop arr1: d[x] += 1; loop arr2: res.append(x), d[x] -= 1
     438(find anagrams) - 242 compare dictionaries + sliding window
     448(disappeared numbers) - loop one: hash construction; loop two: check disappearance
+    Amazon(maximum continuous sequence) - d = {x:[start, end] for x in arr}; loop the dic and update start and end
+    Microsoft(rotate arrows) - d = {arrow:freq}; return len(arr) - max(d.values())
 
     Model:
     dic = {}
