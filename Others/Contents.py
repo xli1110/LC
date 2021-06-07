@@ -19,8 +19,6 @@
 
 207. <TBD>Course Schedule - <Graph, Topological Sort>
 
-208. Implement Trie (Prefix Tree) - <Tree, Array, OOD>
-
 215. Kth Largest Element in an Array - <Quick Sort; K-sized Heap; Quick Select (use self.tar)>
 
 238. Product of Array Except Self - <Res = Pre * Post>

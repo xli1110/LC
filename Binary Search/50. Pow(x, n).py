@@ -13,6 +13,11 @@ class Solution:
         O(logN) - call stack
         """
         if x == 0 and n < 0:
+            """
+            TBD
+            How to check corner case (0)^(-4)?
+            x == 0 may not work, in terms of the data type precision problem.
+            """
             raise Exception("Invalid Input: {0}^{1}".format(x, n))
 
         return self.recur(x, n) if n >= 0 else 1 / self.recur(x, -n)  # passing NEGATIVE n when n < 0

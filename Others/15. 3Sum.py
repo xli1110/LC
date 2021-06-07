@@ -1,5 +1,5 @@
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums: [int]) -> [[int]]:
         """
         O(N ** 2)
         0 - Avoid searching duplicates for ALL THREE pointers i, low, and high.
@@ -46,3 +46,12 @@ class Solution:
                     while low < high and nums[high] == nums[high + 1]:  # avoid duplicates
                         high -= 1
         return res
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    # arr = [-2, 0, 1, 1, 2]
+    arr = [-2, 0, 0, 2, 2]
+    # arr = [-1, 0, 1, 2, -1, -4]
+
+    print(sol.threeSum(arr))

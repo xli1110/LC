@@ -1,5 +1,6 @@
 """
-Q: Suppose we have an unsorted array,
+Q:
+Suppose we have an unsorted array,
 return the maximum length of the continuous sequence.
 
 For example:
@@ -60,5 +61,5 @@ def max_continuous_length(arr):
 
 
 if __name__ == "__main__":
-    arr = [5, 7, 100, 6, 4, 11, 10, 15, 3, 2]
+    arr = [5, 7, 100, 6, 4, 11, 10, 15, 3, 2, 4, 2]
     print(max_continuous_length(arr))
