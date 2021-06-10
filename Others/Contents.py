@@ -44,6 +44,8 @@
 
 Amazon. Encode String - <String>
 
+Apple. Minimum Repetition for Increasing Seq - <Array, Sort>
+
 Hulu. Tricky Quick Sort - <Sort>
 
 Microsoft. Binary Operations - <String>

@@ -157,6 +157,22 @@
 
 621. <TBD>Task Scheduler
 
+Apple. Longest Increasing Sub-Sequence
+    # init
+    dp = [1] * len(arr)
+    # loop
+    for i in range(len(arr)):
+        length = -1
+        for j in range(i):
+            if arr[j] < arr[i]:
+                if dp[j] > length:
+                    length = dp[j]
+
+        if length > 0:
+            dp[i] = length + 1
+    # return
+    return max(dp)
+
 <Screwed>Microsoft. Binary Operations
 
 <Screwed>Microsoft. Maximum Uncontinuous Sequence
