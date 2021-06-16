@@ -48,7 +48,7 @@ def longest_increasing_sub_seq(arr):
             # we can transfer from j to i if arr[j] < arr[i]
             if arr[j] < arr[i]:
                 # If there are more than one j, which one the transfer should start at?
-                # The j which has the maximum dp[j].
+                # Pick j which has the maximum dp[j].
                 if dp[j] > potential_seq_length:
                     potential_seq_length = dp[j]
 
