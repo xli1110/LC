@@ -64,6 +64,34 @@ class Solution:
         # => We recursively return L to the root.
         return L if R is None else R
 
+    def naive_method(self, root, p, q):
+        # search path for p and q
+        self.path = []
+        self.has_found = False
+        self.DFS(root, p)
+        if not self.has_found:
+            raise Exception("Node {} has not been found in the given tree.".format(p.val))
+
+        self.path = []
+        self.has_found = False
+        self.DFS(root, q)
+        if not self.has_found:
+            raise Exception("Node {} has not been found in the given tree.".format(p.val))
+
+        # compare two paths and find the intersection
+        path_p = self.res[0]
+        path_q = self.res[1]
+
+        i = 1  # We have path_p[0] == path_q[0] == root. Thus, we can traverse from 1.
+        j = 1
+        while i <= len(path_p) - 1 and j <= len(path_q) - 1:
+            if path_p[i] != path_q[j]:
+                return self.res[0][i - 1]
+            i += 1
+            j += 1
+
+        return path_p[-1] if i == len(path_p) else path_q[-1]  # note condition i == len(path_p)
+
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if p is None or q is None:
             raise Exception("Target is None")
@@ -73,31 +101,7 @@ class Solution:
         O(N) - invoke DFS twice, loop once
         O(N)
         """
-        # # search path
-        # self.path = []
-        # self.has_found = False
-        # self.DFS(root, p)
-        # if not self.has_found:
-        #     raise Exception("Node {} has not been found in the given tree.".format(p.val))
-        #
-        # self.path = []
-        # self.has_found = False
-        # self.DFS(root, q)
-        # if not self.has_found:
-        #     raise Exception("Node {} has not been found in the given tree.".format(p.val))
-        #
-        # # compare two paths
-        # path_p = self.res[0]
-        # path_q = self.res[1]
-        #
-        # i = 1  # We have path_p[0] == path_q[0] == root. Thus, we can traverse from 1.
-        # j = 1
-        # while i <= len(path_p) - 1 and j <= len(path_q) - 1:
-        #     if path_p[i] != path_q[j]:
-        #         return self.res[0][i - 1]
-        #     i += 1
-        #     j += 1
-        # return path_p[-1] if i == len(path_p) else path_q[-1]  # note condition i == len(path_p)
+        # return self.naive_method(root, p, q)
 
         """
         Recursion Once

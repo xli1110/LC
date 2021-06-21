@@ -14,4 +14,5 @@ Tips:
     <TBD>51(N-Queens)
     78(sub-set) - DFS(arr[i + 1:])
     79(2D array path search) - t = mat[i][j], mat[i][j] = None; DFS; mat[i][j] = t
+    401(sub-set + target + two arrays)
 """
